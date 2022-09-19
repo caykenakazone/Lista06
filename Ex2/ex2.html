@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            
+        }
+        img{
+            width: 150px;
+            text-align: center;
+
+        }
+        h2,h3{
+            text-align: center;
+
+
+        }
+        h3{
+            font-size: 15px;
+        }
+        .cand{
+            color: red;
+            text-shadow: 1px 1px rgb(73, 37, 37) ;
+            text-align: center;
+            
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .imagens{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            flex-direction: row;
+            width: 1000px;
+            
+        }
+        
+        .card{
+            border: 3px solid black;
+            width: 230px;
+            padding: 10px;
+            margin-right: 16px;
+            background-color: rgb(196, 213, 158);
+            
+        }
+        .cor:hover{
+            background-color: green;
+            text-align: center;
+        }
+             
+    </style>
+    <script>
+        let num1 = 0, num2 = 0, num3 = 0, num4 = 0;
+        function add1(){
+        num1 = num1+1
+        document.getElementById("counter1").innerHTML = `Número de votos: ${num1}`
+        }
+        function add2(){
+        num2 = num2+1
+        document.getElementById("counter2").innerHTML = `Número de votos: ${num2}`
+        }
+        function add3(){
+        num3 = num3+1
+        document.getElementById("counter3").innerHTML = `Número de votos: ${num3}`
+        }
+        function add4(){
+        num4 = num4+1
+        document.getElementById("counter4").innerHTML = `Número de votos: ${num4}`
+        }
+        
+    </script>
+</head>
+<body>
+    <div class="container">
+
+        <div class="imagens">
+            <div >
+                <div><h2 class="cand">CANDIDATO 1</h2></div>
+                <div class="card cor">
+                    <h2>Mickey</h2>
+                    <img src="../Imagens/ex2/candidato1.jpg" alt="" onclick="add1()"
+                    >
+                    <h3 id="counter1">Número de votos:</h3>
+                </div>
+            </div>
+            <div>
+                <div><h2 class="cand">CANDIDATO 2</h2></div>
+                <div class="card cor">
+                    <h2>Minnie</h2>
+                    <img src="../Imagens/ex2/candidato2.jpg" alt="" onclick="add2()">
+                    <h3 id="counter2">Número de votos:</h3>
+                </div>
+            </div>
+            <div>
+                <div><h2 class="cand">CANDIDATO 3</h2></div>
+                <div class="card cor">
+                    <h2>Pluto</h2>
+                    <img src="../Imagens/ex2/candidato3.jpg" alt="" onclick="add3()">
+                    <h3 id="counter3">Número de votos:</h3>
+                </div>
+            </div>
+            
+            <div>
+                <div>
+                    <div><h2 class="cand">CANDIDATO 4</h2></div>
+                    <div class="card cor">
+                        <h2>Pateta</h2>
+                        <img src="../Imagens/ex2/candidato4.jpg" alt="" onclick="add4()">
+                        <h3 id="counter4" >Número de votos:</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+    <style>
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+    </style>
+    <script>
+    
+        function trocar(){
+            document.getElementById("personagem").src = "../Imagens/ex1/Assustado.png"
+            document.getElementById("txt").innerHTML = "O que você quer?"
+        }
+        function trocar1(){
+            document.getElementById("personagem").src = "../Imagens/ex1/Pensativo.png"
+            document.getElementById("txt").innerHTML = "zzzzzzzzzzz!!!"
+        }
+        function trocar2(){
+            document.getElementById("personagem").src = "../Imagens/ex1/Nervoso.png"
+            document.getElementById("txt").innerHTML = "Não me aperte!!!"
+        }
+        function trocar3(){
+            document.getElementById("personagem").src = "../Imagens/ex1/alegre.png"
+            nome = prompt("Qual seu nome?")
+            document.getElementById("txt").innerHTML = `${nome}, vamos brincar?`
+        }
+
+        trocar
+    </script>
+</head>
+<body>
+    <div>
+        <img id="personagem" src="../Imagens/ex1/Pensativo.png" alt="" 
+         onmouseover="trocar()"
+        onmouseout="trocar1()"
+        onmousedown="trocar2()"
+        onmouseup="trocar3()"> 
+        <p id="txt">zzzzzzzzzz!!!</p>
+    </div>
+</body>
+</html>
